@@ -1,0 +1,30 @@
+ALGORITHM algorithm_name
+VAR
+write(SLength,NbWord,NbVowel,i,j,k);INTEGER
+BEGIN
+Read(sentence)
+
+// calculate the number of words
+WHILE (sentence[i]<> ".") DO
+    SLength=SLength+1;
+END_WHILE
+END
+
+//calculate the number of words in the sentence
+WHILE (j<SLength) DO
+    IF( sentence[j]=" ") THEN
+        NbWord=Nbword+1;
+        j=j+1;
+    END_IF
+END_WHILE
+
+//calculate the number of vowels which are "a","e","i","o","u"
+WHILE (k<SLength) DO
+    IF(sentence[k]= "a" OR sentence[k]= "e" OR sentence [k]="i" OR sentence [k]="o" OR sentence [k]= "u") THEN
+        NbVowel = NbVowel+1;
+        k=k+1;
+    END_IF
+END_WHILE
+Write(SLength,NbWord,NbVowel);
+
+END
